@@ -42,6 +42,7 @@ jobs:
       - name: Publish Docker image
         run: docker push anand58/$REPO:${GITHUB_SHA::8}
 
+
   redeploy:
     name: Redeploy webhook call
     runs-on: ubuntu-18.04
