@@ -43,5 +43,6 @@ jobs:
           region: ap-south-1
           version_label: "spring-boot-docker-${{ steps.format-time.outputs.replaced }}"
           use_existing_version_if_available: true
+          deployment_package: deploy.zip
           
           
