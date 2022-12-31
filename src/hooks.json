@@ -1,0 +1,8 @@
+[
+    {
+      "id": "redeploy",
+      "execute-command": "redeploy.sh",
+      "command-working-directory": "/backend/src",
+      "response-message": "Redeploying API server."
+    }
+  ]
