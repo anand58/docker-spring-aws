@@ -14,7 +14,7 @@ public class UserController {
 
     @GetMapping("user")
     public String getUser() {
-        return "Anand Is Tested";
+        return "Anand Is Tested On Aws";
     }
 
     @GetMapping("webhook")
