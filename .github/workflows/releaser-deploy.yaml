@@ -41,15 +41,3 @@ jobs:
         run: docker build -t $REPO:latest -t anand58/$REPO:${GITHUB_SHA::8} .
       - name: Publish Docker image
         run: docker push anand58/$REPO:${GITHUB_SHA::8}
-
-
-  redeploy:
-    name: Redeploy webhook call
-    runs-on: ubuntu-18.04
-    needs: [docker]
-    steps:
-      - name: Deploy docker container webhook
-        uses: joelwmale/webhook-action@master
-        env:
-          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL  }}
-          data: "{ 'myField': 'myFieldValue'}"
